@@ -24,7 +24,7 @@ class ViewController: NSViewController, NSTextFieldDelegate {
 	
     
     @IBAction func copyButtonClick(_ sender: NSButton) {
-		let clipboard = NSPasteboard.init()
+		let clipboard = NSPasteboard.general
 		clipboard.clearContents()
 		clipboard.setString(outputField.stringValue, forType: .string)
     }
@@ -67,10 +67,6 @@ class ViewController: NSViewController, NSTextFieldDelegate {
 			@unknown default:
 				fatalError("Unknown input mode")
 		}
-		print(input)
-		print(inputMode)
-		print(outputMode)
-		print(decimalInput)
 		guard let dec = decimalInput else {return "Error input could not be validated"}
 		
 		switch outputMode {
