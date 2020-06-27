@@ -3,10 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 53;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		40E6F63B24A56C8400B4AFD5 /* Mode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E6F63A24A56C8400B4AFD5 /* Mode.swift */; };
+		40E6F63D24A574F400B4AFD5 /* StringConverters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E6F63C24A574F400B4AFD5 /* StringConverters.swift */; };
+		40E6F63F24A6AC1900B4AFD5 /* DecimalConverters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E6F63E24A6AC1900B4AFD5 /* DecimalConverters.swift */; };
+		40E6F64124A6CA4D00B4AFD5 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40E6F64024A6CA4D00B4AFD5 /* HelpViewController.swift */; };
 		AFB48865249F79A100DDE19B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB48864249F79A100DDE19B /* AppDelegate.swift */; };
 		AFB48867249F79A100DDE19B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB48866249F79A100DDE19B /* ViewController.swift */; };
 		AFB48869249F79A100DDE19B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFB48868249F79A100DDE19B /* Assets.xcassets */; };
@@ -33,6 +37,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		40E6F63524A52C9E00B4AFD5 /* HexHelper.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = HexHelper.xctestplan; sourceTree = "<group>"; };
+		40E6F63A24A56C8400B4AFD5 /* Mode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mode.swift; sourceTree = "<group>"; };
+		40E6F63C24A574F400B4AFD5 /* StringConverters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringConverters.swift; sourceTree = "<group>"; };
+		40E6F63E24A6AC1900B4AFD5 /* DecimalConverters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecimalConverters.swift; sourceTree = "<group>"; };
+		40E6F64024A6CA4D00B4AFD5 /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		AFB48861249F79A100DDE19B /* HexHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HexHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFB48864249F79A100DDE19B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AFB48866249F79A100DDE19B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -98,10 +107,14 @@
 			children = (
 				AFB48864249F79A100DDE19B /* AppDelegate.swift */,
 				AFB48866249F79A100DDE19B /* ViewController.swift */,
+				40E6F64024A6CA4D00B4AFD5 /* HelpViewController.swift */,
+				40E6F63E24A6AC1900B4AFD5 /* DecimalConverters.swift */,
+				40E6F63C24A574F400B4AFD5 /* StringConverters.swift */,
 				AFB48868249F79A100DDE19B /* Assets.xcassets */,
 				AFB4886A249F79A100DDE19B /* Main.storyboard */,
 				AFB4886D249F79A100DDE19B /* Info.plist */,
 				AFB4886E249F79A100DDE19B /* HexHelper.entitlements */,
+				40E6F63A24A56C8400B4AFD5 /* Mode.swift */,
 			);
 			path = HexHelper;
 			sourceTree = "<group>";
@@ -110,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				AFB48877249F79A200DDE19B /* HexHelperTests.swift */,
+				40E6F63524A52C9E00B4AFD5 /* HexHelper.xctestplan */,
 				AFB48879249F79A200DDE19B /* Info.plist */,
 			);
 			path = HexHelperTests;
@@ -186,6 +200,7 @@
 		AFB48859249F79A100DDE19B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = YES;
 				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = TheParallelThread;
@@ -255,7 +270,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFB48867249F79A100DDE19B /* ViewController.swift in Sources */,
+				40E6F64124A6CA4D00B4AFD5 /* HelpViewController.swift in Sources */,
 				AFB48865249F79A100DDE19B /* AppDelegate.swift in Sources */,
+				40E6F63F24A6AC1900B4AFD5 /* DecimalConverters.swift in Sources */,
+				40E6F63B24A56C8400B4AFD5 /* Mode.swift in Sources */,
+				40E6F63D24A574F400B4AFD5 /* StringConverters.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,6 +439,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = HexHelper/HexHelper.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = JLYDZGA2RC;
@@ -440,6 +460,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = HexHelper/HexHelper.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = JLYDZGA2RC;
@@ -460,6 +481,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = JLYDZGA2RC;
@@ -482,6 +504,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = JLYDZGA2RC;
@@ -503,6 +526,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = JLYDZGA2RC;
@@ -523,6 +547,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = JLYDZGA2RC;

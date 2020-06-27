@@ -1,0 +1,37 @@
+{
+  "configurations" : [
+    {
+      "id" : "DA7003B2-979C-4CF9-B299-6BECF9D0FAFD",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false,
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:HexHelper.xcodeproj",
+      "identifier" : "AFB48860249F79A100DDE19B",
+      "name" : "HexHelper"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:HexHelper.xcodeproj",
+        "identifier" : "AFB48872249F79A200DDE19B",
+        "name" : "HexHelperTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:HexHelper.xcodeproj",
+        "identifier" : "AFB4887D249F79A200DDE19B",
+        "name" : "HexHelperUITests"
+      }
+    }
+  ],
+  "version" : 1
+}

@@ -10,11 +10,25 @@ import Cocoa
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
-
+    let menuBarItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
+    
 
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
+        menuBarItem.button?.title = "0x"
+        menuBarItem.behavior = .terminationOnRemoval
+        menuBarItem.button!.action = #selector(showMenu)
+        menuBarItem.isVisible = true
+        
+    }
+    
+    @objc func showMenu() {
+        let popover = NSPopover()
+        popover.behavior = .transient
+        let storyboard = NSStoryboard.init(name: "Main", bundle: nil)
+        guard let controller = storyboard.instantiateController(withIdentifier: "menuBarView") as? ViewController else {fatalError("Could not make storyboard viewcontroller")}
+        popover.contentViewController = controller
+        popover.show(relativeTo: menuBarItem.button!.bounds, of: menuBarItem.button!, preferredEdge: .maxY)
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
