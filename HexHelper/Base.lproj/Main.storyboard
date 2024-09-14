@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="17132" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17132"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="22690"/>
+        <capability name="System colors introduced in macOS 10.14" minToolsVersion="10.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -690,7 +691,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="491" height="231"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="uX1-VU-6kC">
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="uX1-VU-6kC">
                                 <rect key="frame" x="18" y="195" width="39" height="16"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Input:" id="sFB-Oc-FqY">
                                     <font key="font" usesAppearanceFont="YES"/>
@@ -698,7 +699,7 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eky-Eb-sRV">
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eky-Eb-sRV">
                                 <rect key="frame" x="18" y="63" width="50" height="16"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Output:" id="dCp-WO-YNq">
                                     <font key="font" usesAppearanceFont="YES"/>
@@ -706,7 +707,7 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vmg-HW-hLS">
+                            <textField focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vmg-HW-hLS">
                                 <rect key="frame" x="75" y="192" width="396" height="21"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="Rzj-lk-kW8">
                                     <font key="font" metaFont="system"/>
@@ -717,7 +718,7 @@
                                     <outlet property="delegate" destination="XfG-lQ-9wD" id="h3g-Sw-O9d"/>
                                 </connections>
                             </textField>
-                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JHY-gT-KWq">
+                            <textField focusRingType="none" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="JHY-gT-KWq">
                                 <rect key="frame" x="86" y="60" width="385" height="21"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" enabled="NO" refusesFirstResponder="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" id="LaW-2Z-mMi">
                                     <font key="font" metaFont="system"/>
@@ -725,7 +726,7 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0bO-Zg-EbB">
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="0bO-Zg-EbB">
                                 <rect key="frame" x="18" y="159" width="133" height="16"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Mode for input value:" id="MgX-Ya-a24">
                                     <font key="font" metaFont="system"/>
@@ -737,7 +738,7 @@
                                 <rect key="frame" x="20" y="133" width="451" height="5"/>
                             </box>
                             <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9da-Ha-Ych">
-                                <rect key="frame" x="167" y="153" width="307" height="25"/>
+                                <rect key="frame" x="166" y="152" width="309" height="25"/>
                                 <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="border" imageScaling="proportionallyDown" inset="2" arrowPosition="arrowAtCenter" id="bpe-lO-VqL">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="menu"/>
@@ -747,8 +748,8 @@
                                     <action selector="inputModeSelected:" target="XfG-lQ-9wD" id="E1c-nu-wCs"/>
                                 </connections>
                             </popUpButton>
-                            <popUpButton verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5id-Hx-tgW">
-                                <rect key="frame" x="167" y="90" width="307" height="25"/>
+                            <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5id-Hx-tgW">
+                                <rect key="frame" x="175" y="92" width="300" height="25"/>
                                 <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="Cdm-Bw-xKz">
                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="menu"/>
@@ -758,7 +759,7 @@
                                     <action selector="outputModeSelected:" target="XfG-lQ-9wD" id="Eoj-Te-aRm"/>
                                 </connections>
                             </popUpButton>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eab-kH-kFL">
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eab-kH-kFL">
                                 <rect key="frame" x="18" y="96" width="142" height="16"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Mode for output value:" id="EQh-Om-SXv">
                                     <font key="font" metaFont="system"/>
@@ -767,7 +768,7 @@
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="79d-E6-SLi">
-                                <rect key="frame" x="207" y="13" width="78" height="32"/>
+                                <rect key="frame" x="213" y="13" width="66" height="32"/>
                                 <buttonCell key="cell" type="push" title="Copy" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ezL-gn-GcQ">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -777,7 +778,7 @@
                                 </connections>
                             </button>
                             <button horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Am1-f3-pge">
-                                <rect key="frame" x="448.5" y="16" width="25" height="25"/>
+                                <rect key="frame" x="442" y="16" width="25" height="25"/>
                                 <buttonCell key="cell" type="help" bezelStyle="helpButton" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="bbu-5A-9sw">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -832,30 +833,36 @@
         <scene sceneID="25M-HW-3Z4">
             <objects>
                 <viewController id="ZC0-Bm-cEh" customClass="HelpViewController" customModule="HexHelper" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="exF-je-Y0l">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="293"/>
+                    <view key="view" misplaced="YES" id="exF-je-Y0l">
+                        <rect key="frame" x="0.0" y="0.0" width="515" height="409"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kog-0K-qKT">
-                                <rect key="frame" x="18" y="43" width="444" height="230"/>
-                                <textFieldCell key="cell" selectable="YES" alignment="left" id="bR3-0J-fmm">
+                            <textField focusRingType="none" horizontalHuggingPriority="251" verticalHuggingPriority="750" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FGO-ld-Ce0">
+                                <rect key="frame" x="-2" y="367" width="519" height="26"/>
+                                <textFieldCell key="cell" lineBreakMode="truncatingTail" selectable="YES" alignment="center" title="HexHelper" usesSingleLineMode="YES" id="TnK-HL-i6c">
+                                    <font key="font" textStyle="title1" name=".SFNS-Regular"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlAccentColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField focusRingType="none" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Kog-0K-qKT">
+                                <rect key="frame" x="18" y="39" width="476" height="320"/>
+                                <textFieldCell key="cell" selectable="YES" alignment="left" allowsEditingTextAttributes="YES" id="bR3-0J-fmm">
                                     <font key="font" metaFont="system"/>
-                                    <mutableString key="title">Auto Detect Mode:
+                                    <mutableString key="title">This utility acts like a standard macOS Menu Bar item. This means you can re-arrange its placement in the menu bar, by cmd+dragging it around, and you can quit the app simply by cmd+dragging it out of the menu bar, and letting go!  Auto Detect Mode:
 In Auto Detect mode, starting the input with 0x will be equivalent to the hex mode, 00 will be equivalent to binary and 0o will be equivalne to octal. Just entering numbers will assume decimal
 
 The utility performs close to no input validation.
-Even if the mode is set to, for example, decimal, you can enter input like "1F" which will result in 10+15. The same input in octal mode will be 8+15 and so on. 
+Even if the mode is set to, for example, decimal, you can enter input like "1F" which will result in 10+15. The same input in octal mode will be 8+15 and so on.  For this release, the maximum input size is 64-bits
 
 Source code available on:
-www.theparallelthread.com/code/HexHelper.zip
-and
-www.github.com/casperes1996/HexHelper</mutableString>
+www.github.com/casperes1996/HexHelper Feedback can be given both on the GitHub page, or over email to: cs@theparallelthread.com</mutableString>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <button verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7sC-xv-8TL">
-                                <rect key="frame" x="202" y="5" width="78" height="32"/>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="7sC-xv-8TL">
+                                <rect key="frame" x="225" y="5" width="66" height="32"/>
                                 <buttonCell key="cell" type="push" title="Done" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="t60-bk-FpD">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -866,12 +873,15 @@ www.github.com/casperes1996/HexHelper</mutableString>
                             </button>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="7sC-xv-8TL" firstAttribute="firstBaseline" secondItem="Kog-0K-qKT" secondAttribute="baseline" constant="28" id="4aR-tx-a3B"/>
-                            <constraint firstItem="Kog-0K-qKT" firstAttribute="height" secondItem="exF-je-Y0l" secondAttribute="height" multiplier="0.76412" id="619-da-nbF"/>
+                            <constraint firstItem="7sC-xv-8TL" firstAttribute="firstBaseline" secondItem="Kog-0K-qKT" secondAttribute="baseline" constant="24" id="4aR-tx-a3B"/>
+                            <constraint firstItem="Kog-0K-qKT" firstAttribute="top" secondItem="FGO-ld-Ce0" secondAttribute="bottom" constant="8" id="CIl-kF-PRw"/>
                             <constraint firstItem="Kog-0K-qKT" firstAttribute="leading" secondItem="exF-je-Y0l" secondAttribute="leading" constant="20" symbolic="YES" id="HbT-HJ-ov3"/>
                             <constraint firstItem="Kog-0K-qKT" firstAttribute="width" secondItem="exF-je-Y0l" secondAttribute="width" multiplier="0.916667" id="UcL-Ko-Yhh"/>
+                            <constraint firstItem="FGO-ld-Ce0" firstAttribute="leading" secondItem="exF-je-Y0l" secondAttribute="leading" id="VTG-JC-D3I"/>
                             <constraint firstItem="7sC-xv-8TL" firstAttribute="centerX" secondItem="exF-je-Y0l" secondAttribute="centerX" id="bNu-Rk-eFX"/>
-                            <constraint firstItem="Kog-0K-qKT" firstAttribute="top" secondItem="exF-je-Y0l" secondAttribute="top" constant="20" symbolic="YES" id="v6o-6z-nFy"/>
+                            <constraint firstAttribute="trailing" secondItem="FGO-ld-Ce0" secondAttribute="trailing" id="dEZ-0k-7NW"/>
+                            <constraint firstAttribute="bottom" secondItem="7sC-xv-8TL" secondAttribute="bottom" constant="12" id="nGD-mb-jBK"/>
+                            <constraint firstItem="FGO-ld-Ce0" firstAttribute="top" secondItem="exF-je-Y0l" secondAttribute="top" constant="16" id="yai-hu-rKp"/>
                         </constraints>
                     </view>
                 </viewController>

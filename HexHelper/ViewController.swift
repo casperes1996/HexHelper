@@ -36,7 +36,7 @@ class ViewController: NSViewController, NSTextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         inputModeSelector.addItems(withTitles: ["Auto Detect", "Decimal", "Binary", "Hex", "Octal"])
-        outputModeSelector.addItems(withTitles: ["Decimal", "Binary", "Hex", "Octal"])
+        outputModeSelector.addItems(withTitles: ["Decimal", "Binary", "Hex", "Octal", "Ascii", "UTF-8", "UTF-16", "UTF-32"])
         inputModeSelector.selectItem(at: 0)
         outputModeSelector.selectItem(at: 0)
 		outputField.isSelectable = false
@@ -49,7 +49,8 @@ class ViewController: NSViewController, NSTextFieldDelegate {
     }
 	
 	func computeResult(for input: String, as inputMode: Mode, to outputMode: Mode) -> String {
-		var decimalInput: Int?
+        if inputField.stringValue.isEmpty { return "" }
+		var decimalInput: Int64?
 		switch inputMode {
 			case .Auto:
 				guard let actualMode = identifyMode(for: input) else {
@@ -61,13 +62,13 @@ class ViewController: NSViewController, NSTextFieldDelegate {
 			case .Octal:
 				decimalInput = inputField.stringValue.convertOctalToDecimal()
 			case .Decimal:
-				decimalInput = Int(inputField.stringValue)
+				decimalInput = Int64(inputField.stringValue)
 			case .Hex:
 				decimalInput = inputField.stringValue.convertHexToDecimal()
 			@unknown default:
 				fatalError("Unknown input mode")
 		}
-		guard let dec = decimalInput else {return "Error input could not be validated"}
+		guard let dec = decimalInput else { return "Invalid input. May exceed 64-bits or contain invalid characters" }
 		
 		switch outputMode {
 			case .Binary:
@@ -81,6 +82,14 @@ class ViewController: NSViewController, NSTextFieldDelegate {
 			case .Hex:
 				guard let answer = dec.convertDecimalToHex() else {return "Could not convert"}
 				return answer
+            case .Ascii:
+                return dec.convertDecimalToChar(using: .ascii)
+            case .utf8:
+                return dec.convertDecimalToChar(using: .utf8)
+            case .utf16:
+                return dec.convertDecimalToChar(using: .utf16)
+            case .utf32:
+                return dec.convertDecimalToChar(using: .utf32)
 			case .Auto:
 				return "How did you set output to auto?"
 			@unknown default:

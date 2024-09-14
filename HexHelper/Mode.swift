@@ -14,6 +14,10 @@ enum Mode {
 	case Hex
 	case Octal
 	case Decimal
+    case Ascii
+    case utf8
+    case utf16
+    case utf32
 }
 
 extension NSPopUpButton {
@@ -27,6 +31,14 @@ extension NSPopUpButton {
 				return .Decimal
 			case "Octal":
 				return .Octal
+        case "Ascii":
+                return .Ascii
+        case "UTF-8":
+            return .utf8
+        case "UTF-16":
+            return .utf16
+        case "UTF-32":
+            return .utf32
 			default:
 				return .Binary
 		}
