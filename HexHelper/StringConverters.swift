@@ -28,7 +28,9 @@ extension String {
 		for letter in self.reversed() {
 			if let number32 = letter.hexDigitValue {
                 let number = Int64(number32)
-                let (newValue, overflow) = value?.addingReportingOverflow(modifier) ?? (nil, true)
+                let (valueToAdd, multiplyOverflow) = number.multipliedReportingOverflow(by: modifier)
+                let (newValue, addingOverflow) = valueToAdd.addingReportingOverflow(value ?? Int64.max)
+                let overflow = multiplyOverflow || addingOverflow
                 value = overflow ? nil : newValue
 				if modifier == 1 {
 					modifier += radix-1

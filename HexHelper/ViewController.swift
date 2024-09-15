@@ -49,7 +49,7 @@ class ViewController: NSViewController, NSTextFieldDelegate {
     }
 	
 	func computeResult(for input: String, as inputMode: Mode, to outputMode: Mode) -> String {
-        if inputField.stringValue.isEmpty { return "" }
+        if inputField.stringValue.isEmpty { return  "" }
 		var decimalInput: Int64?
 		switch inputMode {
 			case .Auto:
