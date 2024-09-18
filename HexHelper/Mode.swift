@@ -8,16 +8,16 @@
 
 import Cocoa
 
-enum Mode {
-	case Auto
+enum Mode: String {
+	case Auto = "Auto Detect"
 	case Binary
 	case Hex
 	case Octal
 	case Decimal
     case Ascii
-    case utf8
-    case utf16
-    case utf32
+    case utf8 = "UTF-8"
+    case utf16 = "UTF-16"
+    case utf32 = "UTF-32"
 }
 
 extension NSPopUpButton {

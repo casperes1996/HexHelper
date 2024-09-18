@@ -17,6 +17,12 @@ class ViewController: NSViewController, NSTextFieldDelegate {
     @IBOutlet weak var inputModeSelector: NSPopUpButton!
     
     @IBOutlet weak var outputModeSelector: NSPopUpButton!
+    
+    
+    static var savedInput = String?(nil)
+    static var savedInputMode = Mode.Auto
+    static var savedOutputMode = Mode.Decimal
+    
 	    
     @IBAction func inputModeSelected(_ sender: NSPopUpButton) {
 		outputField.stringValue = computeResult(for: inputField.stringValue, as: inputModeSelector.mode(), to: outputModeSelector.mode())
@@ -42,6 +48,12 @@ class ViewController: NSViewController, NSTextFieldDelegate {
 		outputField.isSelectable = false
 		outputField.isEditable = false
 		outputField.isEnabled = true
+        if let savedInput = Self.savedInput {
+            inputField.stringValue = savedInput
+        }
+        inputModeSelector.selectItem(withTitle: Self.savedInputMode.rawValue)
+        outputModeSelector.selectItem(withTitle: Self.savedOutputMode.rawValue)
+        outputField.stringValue = computeResult(for: inputField.stringValue, as: inputModeSelector.mode(), to: outputModeSelector.mode())
     }
     
     func controlTextDidChange(_ obj: Notification) {
@@ -49,7 +61,8 @@ class ViewController: NSViewController, NSTextFieldDelegate {
     }
 	
 	func computeResult(for input: String, as inputMode: Mode, to outputMode: Mode) -> String {
-        if inputField.stringValue.isEmpty { return  "" }
+        defer { Self.savedInput = input; Self.savedInputMode = inputMode; Self.savedOutputMode = outputMode }
+        if input.isEmpty { return  "" }
 		var decimalInput: Int64?
 		switch inputMode {
 			case .Auto:
