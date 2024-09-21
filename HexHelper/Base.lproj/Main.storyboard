@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="22690"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="23094"/>
         <capability name="System colors introduced in macOS 10.14" minToolsVersion="10.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -741,7 +740,7 @@
                                 <rect key="frame" x="166" y="152" width="309" height="25"/>
                                 <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="border" imageScaling="proportionallyDown" inset="2" arrowPosition="arrowAtCenter" id="bpe-lO-VqL">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="menu"/>
+                                    <font key="font" metaFont="message"/>
                                     <menu key="menu" id="hQl-kx-ahk"/>
                                 </popUpButtonCell>
                                 <connections>
@@ -752,7 +751,7 @@
                                 <rect key="frame" x="175" y="92" width="300" height="25"/>
                                 <popUpButtonCell key="cell" type="push" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" id="Cdm-Bw-xKz">
                                     <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="menu"/>
+                                    <font key="font" metaFont="message"/>
                                     <menu key="menu" id="mTi-7A-cEe"/>
                                 </popUpButtonCell>
                                 <connections>
@@ -829,11 +828,11 @@
             </objects>
             <point key="canvasLocation" x="34.5" y="659"/>
         </scene>
-        <!--Help View Controller-->
+        <!--Info-->
         <scene sceneID="25M-HW-3Z4">
             <objects>
-                <viewController id="ZC0-Bm-cEh" customClass="HelpViewController" customModule="HexHelper" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" misplaced="YES" id="exF-je-Y0l">
+                <viewController title="Info" id="ZC0-Bm-cEh" customClass="HelpViewController" customModule="HexHelper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="exF-je-Y0l">
                         <rect key="frame" x="0.0" y="0.0" width="515" height="409"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
@@ -849,14 +848,14 @@
                                 <rect key="frame" x="18" y="39" width="476" height="320"/>
                                 <textFieldCell key="cell" selectable="YES" alignment="left" allowsEditingTextAttributes="YES" id="bR3-0J-fmm">
                                     <font key="font" metaFont="system"/>
-                                    <mutableString key="title">This utility acts like a standard macOS Menu Bar item. This means you can re-arrange its placement in the menu bar, by cmd+dragging it around, and you can quit the app simply by cmd+dragging it out of the menu bar, and letting go!  Auto Detect Mode:
+                                    <string key="title">This utility acts like a standard macOS Menu Bar item. This means you can re-arrange its placement in the menu bar, by cmd+dragging it around, and you can quit the app simply by cmd+dragging it out of the menu bar, and letting go!  Auto Detect Mode:
 In Auto Detect mode, starting the input with 0x will be equivalent to the hex mode, 00 will be equivalent to binary and 0o will be equivalne to octal. Just entering numbers will assume decimal
 
 The utility performs close to no input validation.
 Even if the mode is set to, for example, decimal, you can enter input like "1F" which will result in 10+15. The same input in octal mode will be 8+15 and so on.  For this release, the maximum input size is 64-bits
 
 Source code available on:
-www.github.com/casperes1996/HexHelper Feedback can be given both on the GitHub page, or over email to: cs@theparallelthread.com</mutableString>
+www.github.com/casperes1996/HexHelper Feedback can be given both on the GitHub page, or over email to: cs@theparallelthread.com</string>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
