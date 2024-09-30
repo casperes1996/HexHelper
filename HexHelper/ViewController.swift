@@ -9,8 +9,11 @@
 import Cocoa
 
 class ViewController: NSViewController, NSTextFieldDelegate {
-
+    @IBOutlet weak var headerView: NSView!
+    
     @IBOutlet weak var inputField: NSTextField!
+    
+    @IBOutlet weak var quitButton: NSButton!
     
     @IBOutlet weak var outputField: NSTextField!
     
@@ -24,6 +27,9 @@ class ViewController: NSViewController, NSTextFieldDelegate {
     static var savedOutputMode = Mode.Decimal
     
 	    
+    @IBAction func quitApplication(_ sender: NSButton) {
+        exit(0)
+    }
     @IBAction func inputModeSelected(_ sender: NSPopUpButton) {
 		outputField.stringValue = computeResult(for: inputField.stringValue, as: inputModeSelector.mode(), to: outputModeSelector.mode())
     }
@@ -41,6 +47,7 @@ class ViewController: NSViewController, NSTextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        quitButton.toolTip = "Quit HexHelper"
         inputModeSelector.addItems(withTitles: ["Auto Detect", "Decimal", "Binary", "Hex", "Octal"])
         outputModeSelector.addItems(withTitles: ["Decimal", "Binary", "Hex", "Octal", "Ascii", "UTF-8", "UTF-16", "UTF-32"])
         inputModeSelector.selectItem(at: 0)
@@ -54,6 +61,11 @@ class ViewController: NSViewController, NSTextFieldDelegate {
         inputModeSelector.selectItem(withTitle: Self.savedInputMode.rawValue)
         outputModeSelector.selectItem(withTitle: Self.savedOutputMode.rawValue)
         outputField.stringValue = computeResult(for: inputField.stringValue, as: inputModeSelector.mode(), to: outputModeSelector.mode())
+    }
+    
+    override func viewDidAppear() {
+        super.viewDidAppear()
+        inputField.becomeFirstResponder()
     }
     
     func controlTextDidChange(_ obj: Notification) {
